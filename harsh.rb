@@ -2,17 +2,16 @@
 class Harsh < Formula
   desc "habit tracking for geeks. A minimalist CLI for examining your habits."
   homepage "https://github.com/wakatara/harsh"
-  version "0.8.6"
+  version "0.8.7"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/wakatara/harsh/releases/download/v0.8.6/harsh_Darwin_x86_64.tar.gz"
-    sha256 "de47a678a590e209941edba15057a0ed4f5172b1a8b96d9f7cdf0eee95e9cc14"
-  elsif OS.linux?
-    if Hardware::CPU.intel?
-      url "https://github.com/wakatara/harsh/releases/download/v0.8.6/harsh_Linux_x86_64.tar.gz"
-      sha256 "3f73cc7e33e0acd9986071d76d4320e54c442e15fe5fdd8e4d85466ae4ae69ff"
-    end
+    url "https://github.com/wakatara/harsh/releases/download/v0.8.7/harsh_Darwin_x86_64.tar.gz"
+    sha256 "52682962cc50b31b7c20b74f662b2d70de7f7a45544c1a8b62d9ced93cde9f13"
+  end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/wakatara/harsh/releases/download/v0.8.7/harsh_Linux_x86_64.tar.gz"
+    sha256 "cf376e9719c13e206a1449b1ea213b2b1c8a298bd611938506cd39f48b2f2c60"
   end
 
   def install

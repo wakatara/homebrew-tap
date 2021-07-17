@@ -5,38 +5,34 @@
 class Harsh < Formula
   desc "habit tracking for geeks. A minimalist CLI for examining your habits."
   homepage "https://github.com/wakatara/harsh"
-  version "0.8.9"
+  version "0.8.10"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wakatara/harsh/releases/download/v0.8.9/harsh_Darwin_x86_64.tar.gz"
-      sha256 "97d494cb90a8e07bf2ee14b6eb55299d6c9a53e8e19ede1aad5b19291e5c6657"
+      url "https://github.com/wakatara/harsh/releases/download/v0.8.10/harsh_Darwin_x86_64.tar.gz"
+      sha256 "dd853604d7a69f233f4917cb65d10fc07efface046041c359149736794ec96a6"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wakatara/harsh/releases/download/v0.8.9/harsh_Darwin_arm64.tar.gz"
-      sha256 "b2c39814a21b6f65151eab24c53ad7812f6ef3238910f7c68ab85c7fe3fef6c0"
+      url "https://github.com/wakatara/harsh/releases/download/v0.8.10/harsh_Darwin_arm64.tar.gz"
+      sha256 "7cfdf32e88613953d0a18864548e9cc9c650745cf0b817322885738fd79ad1f9"
     end
-
-    depends_on arch: [:x86_64, :aarch64]
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/wakatara/harsh/releases/download/v0.8.9/harsh_Linux_x86_64.tar.gz"
-      sha256 "b2e7b7f1a434fa0f9051e09034d84bf0346a9d0b883e85f18f006aeb2a941d5d"
+      url "https://github.com/wakatara/harsh/releases/download/v0.8.10/harsh_Linux_x86_64.tar.gz"
+      sha256 "d73305acf7ef1b931a55f13181e393dddd7d0c9fa998b686487d0054cff80383"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/wakatara/harsh/releases/download/v0.8.9/harsh_Linux_armv6.tar.gz"
-      sha256 "f159773b81e248fa690cd9c9dd9958d991e4569d81afea3c5275f0993aec4ad5"
+      url "https://github.com/wakatara/harsh/releases/download/v0.8.10/harsh_Linux_armv6.tar.gz"
+      sha256 "3ea59316753c9b26dcadc9e2447230388f2a9990602bd8aa73476ca15bdcb63e"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wakatara/harsh/releases/download/v0.8.9/harsh_Linux_arm64.tar.gz"
-      sha256 "ce6122ca57c1859680c1957bb2545dfe7fe4f9bcaff614bf29c11bf4762536c5"
+      url "https://github.com/wakatara/harsh/releases/download/v0.8.10/harsh_Linux_arm64.tar.gz"
+      sha256 "00ca6ad11b20a3b22ec89253d36d1ca21b0f286b5b003e67c387a8f3ed9a4983"
     end
-
-    depends_on arch: [:x86_64, :aarch64, :arm]
   end
 
   def install

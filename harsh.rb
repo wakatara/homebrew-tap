@@ -5,21 +5,21 @@
 class Harsh < Formula
   desc "habit tracking for geeks. A minimalist CLI for examining your habits."
   homepage "https://github.com/wakatara/harsh"
-  version "0.10.0"
+  version "0.10.1"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/wakatara/harsh/releases/download/v0.10.0/harsh_Darwin_x86_64.tar.gz"
-      sha256 "512410ed5a5ec9ffb52db5f20f8f3df709d3dcc971af8630b838d5d074def489"
+      url "https://github.com/wakatara/harsh/releases/download/v0.10.1/harsh_Darwin_x86_64.tar.gz"
+      sha256 "c8915ce6c4a0f72b3c7fbeeb8e10be2bcb463e121e92e2fc9b407a99efcfec60"
 
       def install
         bin.install "harsh"
       end
     end
     on_arm do
-      url "https://github.com/wakatara/harsh/releases/download/v0.10.0/harsh_Darwin_arm64.tar.gz"
-      sha256 "3af973968410c552b79936d156d9db02a65047e054c818d87b180fa3c226fb69"
+      url "https://github.com/wakatara/harsh/releases/download/v0.10.1/harsh_Darwin_arm64.tar.gz"
+      sha256 "dcca5b6f1e32ed3d545aa974dce06a741cdd1a0890c3ef4dc5ab15825ae9bb55"
 
       def install
         bin.install "harsh"
@@ -30,8 +30,8 @@ class Harsh < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/wakatara/harsh/releases/download/v0.10.0/harsh_Linux_x86_64.tar.gz"
-        sha256 "77d995a12fb11c9dbb6342a0f7e796464556a9e7302688808feda4d7a902a5eb"
+        url "https://github.com/wakatara/harsh/releases/download/v0.10.1/harsh_Linux_x86_64.tar.gz"
+        sha256 "1a7419b04dadd16cd5903a48249f40864a52c2983aff6d05b2d5f69159f29f19"
 
         def install
           bin.install "harsh"
@@ -40,8 +40,8 @@ class Harsh < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/wakatara/harsh/releases/download/v0.10.0/harsh_Linux_arm64.tar.gz"
-        sha256 "e669d34e5673220a407b14753d0621a1fd075a18ef462b91ae92e32d4764f4fe"
+        url "https://github.com/wakatara/harsh/releases/download/v0.10.1/harsh_Linux_arm64.tar.gz"
+        sha256 "2dafe00b07123ceee7f1f2f23e12c72cfacc45e7b60b0be579b1dc963e55e403"
 
         def install
           bin.install "harsh"

@@ -10,16 +10,16 @@ class Ice9 < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wakatara/ice9/releases/download/0.4.1/ice9_0.4.1_Darwin_x86_64.tar.gz"
-      sha256 "f19e0445bc129c3ca873e77815ec3bfa2273df0a22413813c4c0efa4cec66d34"
+      url "https://github.com/wakatara/ice9/releases/download/0.4.1/ice9_Darwin_x86_64.tar.gz"
+      sha256 "3eb46615f911254f35c6f3d7ba068dda292193f6813fa1d11eae0b88e1ec2f98"
 
       def install
         bin.install "ice"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wakatara/ice9/releases/download/0.4.1/ice9_0.4.1_Darwin_arm64.tar.gz"
-      sha256 "e00f02867b6592d900ea01d0202502239034ab836b4c303d5b49b576f78e9402"
+      url "https://github.com/wakatara/ice9/releases/download/0.4.1/ice9_Darwin_arm64.tar.gz"
+      sha256 "0e8e3cc874a554d1db9a7344842f775146882e0c9dd7b8e5fbc04618344233cf"
 
       def install
         bin.install "ice"
@@ -29,15 +29,15 @@ class Ice9 < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wakatara/ice9/releases/download/0.4.1/ice9_0.4.1_Linux_x86_64.tar.gz"
-      sha256 "2257bd062e432039f20c6a892783ccd525a7f45a93fb2dd9aeb5a515dfe2b838"
+      url "https://github.com/wakatara/ice9/releases/download/0.4.1/ice9_Linux_x86_64.tar.gz"
+      sha256 "fb4dcca913bb425de079758d57214bf30c26711faf14e1881b2293902b72ace2"
       def install
         bin.install "ice"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wakatara/ice9/releases/download/0.4.1/ice9_0.4.1_Linux_arm64.tar.gz"
-      sha256 "796388f8d45f8ea3952c6028fa82b8e3ec03dced0c07d77df0927badef8f4f08"
+      url "https://github.com/wakatara/ice9/releases/download/0.4.1/ice9_Linux_arm64.tar.gz"
+      sha256 "a86f525fa7ea0192d03a4e1beed43e8a466e87b287117e88ca6295f8e77e4db0"
       def install
         bin.install "ice"
       end

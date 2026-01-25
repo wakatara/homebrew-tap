@@ -5,21 +5,21 @@
 class Ice9 < Formula
   desc "Comet sublimation modeling tool - calculates equilibrium temperature and sublimation rates for volatile ices"
   homepage "https://github.com/wakatara/ice9"
-  version "0.4.3"
+  version "0.4.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wakatara/ice9/releases/download/0.4.3/ice9_Darwin_x86_64.tar.gz"
-      sha256 "52f98e6d2edddbf6115405e76762737938f0335e45fafce9e35349a13fdea3da"
+      url "https://github.com/wakatara/ice9/releases/download/v0.4.4/ice9_Darwin_x86_64.tar.gz"
+      sha256 "07b2114385b581e92b37aa5fc608454f3b7388987420ea577f7d87b1d679ce54"
 
       def install
         bin.install "ice"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wakatara/ice9/releases/download/0.4.3/ice9_Darwin_arm64.tar.gz"
-      sha256 "3636c3bd998f2570bedeaf1e463cbb0b8cff698818ce6a047f4c3107b2763362"
+      url "https://github.com/wakatara/ice9/releases/download/v0.4.4/ice9_Darwin_arm64.tar.gz"
+      sha256 "3fb9bdb63cff3d5dc9ad0f14b49ccb71859c73e421e3071350352ea04efb07c5"
 
       def install
         bin.install "ice"
@@ -29,15 +29,15 @@ class Ice9 < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wakatara/ice9/releases/download/0.4.3/ice9_Linux_x86_64.tar.gz"
-      sha256 "5031812044af24648efb043da3e6d2d6d3b1ee22b67e5b83f6cf534cc3e81518"
+      url "https://github.com/wakatara/ice9/releases/download/v0.4.4/ice9_Linux_x86_64.tar.gz"
+      sha256 "c40ce113e8d17176544217597a0482e82cf078ea79b414e7570d0813eab83e48"
       def install
         bin.install "ice"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wakatara/ice9/releases/download/0.4.3/ice9_Linux_arm64.tar.gz"
-      sha256 "1bb9f2cc2313575434f8b21105a242edb97199535705d2d2bfd3f522348e5f74"
+      url "https://github.com/wakatara/ice9/releases/download/v0.4.4/ice9_Linux_arm64.tar.gz"
+      sha256 "c45a913de1bce7733c9a09d626288f04a13eec5178216445e5e165554571ebde"
       def install
         bin.install "ice"
       end

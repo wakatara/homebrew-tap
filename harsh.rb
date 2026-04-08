@@ -5,21 +5,21 @@
 class Harsh < Formula
   desc "habit tracking for geeks. A minimalist CLI for examining your habits."
   homepage "https://github.com/wakatara/harsh"
-  version "0.14.1"
+  version "0.14.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wakatara/harsh/releases/download/v0.14.1/harsh_Darwin_x86_64.tar.gz"
-      sha256 "ab0c308b42b83de35558747e9e5637ee35208ce55840352200f9619bfdee7d36"
+      url "https://github.com/wakatara/harsh/releases/download/v0.14.2/harsh_Darwin_x86_64.tar.gz"
+      sha256 "6da1626bd9b3d5fc112c1691d4a2997fae34bd991f86e3af2f75aeeaa676024b"
 
       define_method(:install) do
         bin.install "harsh"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wakatara/harsh/releases/download/v0.14.1/harsh_Darwin_arm64.tar.gz"
-      sha256 "3b6c423f8a5adcfe38aa0d27d4b89ac895d807f6330b7ee88434a73628809078"
+      url "https://github.com/wakatara/harsh/releases/download/v0.14.2/harsh_Darwin_arm64.tar.gz"
+      sha256 "dd0631980a6439e8c136442b009eb64c0a84876ec8179dd5f5bc2493d9d861f0"
 
       define_method(:install) do
         bin.install "harsh"
@@ -29,22 +29,22 @@ class Harsh < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wakatara/harsh/releases/download/v0.14.1/harsh_Linux_x86_64.tar.gz"
-      sha256 "f00e7fe36cc1c5f07e019e81f5ffda9d9844308119f176738156a8eb2a4487dd"
+      url "https://github.com/wakatara/harsh/releases/download/v0.14.2/harsh_Linux_x86_64.tar.gz"
+      sha256 "276e2c22f667764341044d810da0db092608fc343ad240ca7a8244d1fd8f0048"
       define_method(:install) do
         bin.install "harsh"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/wakatara/harsh/releases/download/v0.14.1/harsh_Linux_arm.tar.gz"
-      sha256 "881efb35aa6d8eb9fc13dfff30e27017a41ab66bacbadb29bfd4049bba453450"
+      url "https://github.com/wakatara/harsh/releases/download/v0.14.2/harsh_Linux_arm.tar.gz"
+      sha256 "a648cf8f66f764f66e8673724370b4246d0cc93e0262939b2d8c3022039a44bd"
       define_method(:install) do
         bin.install "harsh"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wakatara/harsh/releases/download/v0.14.1/harsh_Linux_arm64.tar.gz"
-      sha256 "84fc69dfb70edea47943eff23ba324d76b6c02edc74ad9900582d3192d3d3da2"
+      url "https://github.com/wakatara/harsh/releases/download/v0.14.2/harsh_Linux_arm64.tar.gz"
+      sha256 "19733ed084d2240248a5f6791548238b65ef51d52fd456b0e0b28028d0882ee6"
       define_method(:install) do
         bin.install "harsh"
       end

@@ -5,23 +5,23 @@
 class Ice9 < Formula
   desc "Comet sublimation modeling tool - calculates equilibrium temperature and sublimation rates for volatile ices"
   homepage "https://github.com/wakatara/ice9"
-  version "0.4.5"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wakatara/ice9/releases/download/v0.4.5/ice9_Darwin_x86_64.tar.gz"
-      sha256 "940ad22803f5e0a6a5996c0ee8bc0f1c14b39120feafd69c03a55a7ed87dc921"
+      url "https://github.com/wakatara/ice9/releases/download/v0.5.0/ice9_Darwin_x86_64.tar.gz"
+      sha256 "5a10f40c1e6cc752604d98fa7d99cbca77bd6f822105d1c05dfeec34c6bb35e0"
 
-      def install
+      define_method(:install) do
         bin.install "ice"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wakatara/ice9/releases/download/v0.4.5/ice9_Darwin_arm64.tar.gz"
-      sha256 "5139ae2434fc39dc5bdc50aa1d303195d61ed852143c6850010a5d262984426c"
+      url "https://github.com/wakatara/ice9/releases/download/v0.5.0/ice9_Darwin_arm64.tar.gz"
+      sha256 "4814e7d554614d6a4c21c3629d6111c4167816aa1cbd961b1b7e68e10498149a"
 
-      def install
+      define_method(:install) do
         bin.install "ice"
       end
     end
@@ -29,16 +29,16 @@ class Ice9 < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wakatara/ice9/releases/download/v0.4.5/ice9_Linux_x86_64.tar.gz"
-      sha256 "92196626fdca73b1427314f244147250dcf4e4014f0fb10de66e7fda6465f5fa"
-      def install
+      url "https://github.com/wakatara/ice9/releases/download/v0.5.0/ice9_Linux_x86_64.tar.gz"
+      sha256 "b7ca2a9815fcd2bd313939485cecb073e2896f7c7320374132172742a8c8f6df"
+      define_method(:install) do
         bin.install "ice"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wakatara/ice9/releases/download/v0.4.5/ice9_Linux_arm64.tar.gz"
-      sha256 "a2b528561b194c10fff24ab6094472f319051c556d15099aad767466b2bfcdc7"
-      def install
+      url "https://github.com/wakatara/ice9/releases/download/v0.5.0/ice9_Linux_arm64.tar.gz"
+      sha256 "7d4f91ef55f44b7a633186dfe0c3b07e6005b6d5ccd6e5f05cc96d6f7dd46c82"
+      define_method(:install) do
         bin.install "ice"
       end
     end

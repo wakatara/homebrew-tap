@@ -5,21 +5,21 @@
 class Ice9 < Formula
   desc "Comet sublimation modeling tool - calculates equilibrium temperature and sublimation rates for volatile ices"
   homepage "https://github.com/wakatara/ice9"
-  version "0.5.1"
+  version "0.5.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wakatara/ice9/releases/download/v0.5.1/ice9_Darwin_x86_64.tar.gz"
-      sha256 "9585cb69243279d82baadef6516d6b67483e7d409b4495f6bda7d62140498424"
+      url "https://github.com/wakatara/ice9/releases/download/v0.5.2/ice9_Darwin_x86_64.tar.gz"
+      sha256 "3ed141ea3bb2f8c20ee5bce7bb85c297e0c563ca133a584b12917b930b6c95a2"
 
       define_method(:install) do
         bin.install "ice"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wakatara/ice9/releases/download/v0.5.1/ice9_Darwin_arm64.tar.gz"
-      sha256 "6b5189b047bbb0f39f79d1af2b9054d4a9e2f00fcaba8a84c7c6e4a4dd5becb5"
+      url "https://github.com/wakatara/ice9/releases/download/v0.5.2/ice9_Darwin_arm64.tar.gz"
+      sha256 "94704e9249e4a1bcf19dffb98c4357bd752de66adfd48ae03f3423dd06726b60"
 
       define_method(:install) do
         bin.install "ice"
@@ -29,15 +29,15 @@ class Ice9 < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wakatara/ice9/releases/download/v0.5.1/ice9_Linux_x86_64.tar.gz"
-      sha256 "41461514cc65d29c505d4369bdc47e8dffcc851e9f163e7d9f2de8b20b60c40b"
+      url "https://github.com/wakatara/ice9/releases/download/v0.5.2/ice9_Linux_x86_64.tar.gz"
+      sha256 "010af358e1bf11cc39e2472d1ff8b9665548e1eab1dfe5d7c5a2a29630432cb7"
       define_method(:install) do
         bin.install "ice"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wakatara/ice9/releases/download/v0.5.1/ice9_Linux_arm64.tar.gz"
-      sha256 "13f43006c616a34314a8427d5c5bd90a85316c376fe75b5ebee2eb98b27e3398"
+      url "https://github.com/wakatara/ice9/releases/download/v0.5.2/ice9_Linux_arm64.tar.gz"
+      sha256 "72dbc033358af449595451586d1296633c84b7d3824b0f4fdfc2578f070314ff"
       define_method(:install) do
         bin.install "ice"
       end
